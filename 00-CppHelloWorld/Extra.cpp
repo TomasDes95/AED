@@ -2,6 +2,13 @@
 #include <fstream>
 #include <string>
 
+/**
+ * Extra.cpp
+ * output.txt programaticamente
+ * Tomas Desiderioscioli
+ * 15/04/21
+ */
+
 int main(){
     std::string FILENAME = "output.txt";
     std::string OUTPUT = "hola World!";
