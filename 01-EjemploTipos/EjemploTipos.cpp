@@ -9,7 +9,8 @@
  * 02/05/21
  */
 
-using std::string;
+
+using namespace std::literals;
 
 int main() {
 
@@ -41,17 +42,17 @@ int main() {
     assert('2'%'2' == 0);
 
     //unsigned int
-    assert(2==2);
-    assert(2!=3);
-    assert(2<=3);
-    assert(2<=2);
-    assert(3>=2);
-    assert(3>=3);
-    assert(2+2 == 4);
-    assert(2-2 == 0);
-    assert(2*2 == 4);
-    assert(2/2 == 1);
-    assert(3%2 == 1);
+    assert(2u==2u);
+    assert(2u!=3u);
+    assert(2u<=3u);
+    assert(2u<=2u);
+    assert(3u>=2u);
+    assert(3u>=3u);
+    assert(2u+2u == 4u);
+    assert(2u-2u == 0u);
+    assert(2u*2u == 4u);
+    assert(2u/2u == 1u);
+    assert(3u%2u == 1u);
 
     //signed int
     assert(-1==-1);
@@ -67,35 +68,28 @@ int main() {
     assert((-3)%(-2) == -1);
 
     //double
-    assert(2.1==2.1);
-    assert(2.1!=2.2);
-    assert(2.2<=3.2);
-    assert(2.2<=2.2);
-    assert(3.2>=2.2);
-    assert(3.2>=3.2);
-    assert(2.1+2.1 == 4.2);
-    assert(2.1-2.1 == 0);
-    assert(2.2*2 == 4.4);
-    assert(2.2/2.2 == 1);
+    assert(21e-1==21e-1);
+    assert(21e-1!=22e-1);
+    assert(22e-1<=32e-1);
+    assert(22e-1<=22e-1);
+    assert(32e-1>=22e-1);
+    assert(32e-1>=32e-1);
+    assert(21e-1+21e-1 == 42e-1);
+    assert(21e-1-21e-1 == 0e-1);
+    assert(22e-1*20e-1 == 44e-1);
+    assert(22e-1/22e-1 == 10e-1);
 
     //string
-    //consigna referida a la clase string de std o a char[]?
-    string s1 = "aa";
-    string s2 = "ab";
-    string s3 = "aaa";
-    string s4 = "aaaa";
+    assert("aa"s == "aa"s);
+    assert("aa"s!="ab"s);
+    assert("ab"s!="aaa"s);
+    assert("a"s<="b"s);
+    assert("ab"s<="ab"s);
+    assert("b"s>="a"s);
+    assert("aaa"s>="aaa"s);
+    assert(("aa"s+"aa"s) == "aaaa"s);
+    assert("aaaa"s.length() == 4);
 
-    assert(s1==s1);
-    assert(s1!=s2);
-    assert(s1!=s3);
-    assert(s1<=s3);
-    assert(s1<=s1);
-    assert(s3>=s1);
-    assert(s3>=s3);
-    assert((s1+s1) == s4);
-    assert(s4.length() == 4);
-
-
-    printf("Todas las pruebas finalizaron con exito");
+    std::cout << "Todas las pruebas finalizaron con exito";
 }
 
